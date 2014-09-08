@@ -1,0 +1,56 @@
+//user defined func
+<?php
+function testFuncNoArg()
+{
+    echo "Inside the testFuncNoArg Function \n\n";
+}
+
+testFuncNoArg();  //call the function testMsg
+
+
+
+//function with arg
+function testFuncWithArg($fname)
+{
+    echo("$fname Inside the testFuncWithArg \n\n");
+}
+
+testFuncWithArg("Fadzli");
+
+
+//function with more arg
+function testFuncWithMoreArg($fname,$msg)
+{
+    echo("$fname Inside the testFuncWithMoreArg $msg \n\n");
+}
+
+testFuncWithMoreArg("Fadzli", "Lah");
+
+
+//func with def arg
+
+
+function testAgeWithDefArg($age=22)
+{
+    echo "Your age is $age \n\n";
+}
+
+testAgeWithDefArg(27);
+testAgeWithDefArg();
+testAgeWithDefArg(30);
+
+function testAgeWithArgAndReturn($ageNow,$agePrev)
+{
+    $total=$ageNow+$agePrev;
+    return $total;
+
+}
+
+
+
+echo "\n\n 18+1= ".testAgeWithArgAndReturn(18,1);
+echo "\n\n 19+1= ".testAgeWithArgAndReturn(19,1);
+echo "\n\n 20+1= ".testAgeWithArgAndReturn(20,1);
+
+
+
